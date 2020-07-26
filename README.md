@@ -1,6 +1,6 @@
 # Educ
 
-A responsive template which allows you select courses based on interest and instructor.
+A responsive template which allows user to select courses based on interest and instructor
 
 ## Features
 ### Header:
