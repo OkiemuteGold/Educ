@@ -1,0 +1,760 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'lato', sans-serif;
+}
+
+/* TOP HEADER */
+
+#contact-info {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 30px;
+    border-bottom: 1px solid rgba(168, 168, 168, 0.3);
+    box-shadow: 0 1px 0 0 rgba(168, 168, 168, 0.1);
+}
+
+.contact-info {
+    display: inline-flex;
+    margin: auto 3%;
+}
+
+.contact-info .number, 
+.contact-info .email {
+    border-right: 1px solid rgba(168, 168, 168, 0.3);
+    margin-right: 0.9rem;
+    padding-right: 0.9rem;
+}
+
+#contact-info:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.sm-btn a {
+    font-size: 15px;
+    margin: auto 0.6rem;
+    text-decoration: none;
+    color: rgb(17, 85, 204);
+    transition: color 200ms linear;
+}
+
+.sm-btn a:hover {
+    color: rgba(17, 85, 204, 0.7);
+}
+
+.sm-btn a:nth-child(1) {
+    margin-left: 0;
+}
+
+.sm-btn a:nth-child(3) {
+    margin-right: 0;
+}
+
+/* BOTTOM HEADER */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 30px;
+}
+
+.brand-icon {
+    margin: auto;
+    margin-left: 4%;
+    line-height: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.brand-icon a {
+    text-decoration: none;
+    /* color: rgb(8, 8, 8); */
+    color: rgb(29, 29, 81);
+}
+
+nav li {
+    display: inline-flex;
+    list-style-type: none;
+    margin-right: 1.1rem;
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgb(8, 8, 8);
+    transition: border-bottom 200ms linear;
+}
+
+.active, 
+nav li a:hover {
+    border-bottom: 4px solid rgb(17, 85, 204);
+}
+
+.login a, 
+.signup a {
+    background: rgb(17, 85, 204);
+    border-radius: 2px;
+    padding: 5px 1rem;
+    color: white;
+    transition: 200ms linear;
+}
+
+.login a:hover, 
+.signup a:hover {
+    border: none;
+    background: rgba(17, 85, 204, 0.7);
+}
+
+.login i, .signup i {
+    display: none;
+}
+
+/* SIDEBAR */
+
+#show-sidebar-btn, 
+#hide-sidebar-btn, 
+#check {
+    position: absolute;
+    line-height: 5rem;
+    top: 1.875rem;
+    left: 3%;
+    color: rgb(29, 29, 81);
+    font-size: 26px;
+    cursor: pointer;
+    display: none;
+}
+
+/* MAIN */
+
+.main {
+    background: linear-gradient(to bottom,rgba(3, 3, 63, 0.8), rgba(3, 3, 63));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-spacing: 1px;
+    height: 500px;
+    font-size: 1rem;
+}
+
+.main aside {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+}
+
+.main a {
+    text-decoration: none;
+    color: rgba(241, 239, 239, 0.7);
+    transition: border-bottom 200ms linear;
+}
+
+.main a:hover {
+    color: #eee;
+}
+
+/* SHOWCASE */
+
+.showcase {
+    margin: 60px 6%;
+}
+
+.showcase .popular-course-title {
+    margin-bottom: 2.5rem;
+    font-size: 24px;
+    text-align: center;
+    color: rgb(8, 8, 8);
+}
+
+#subject {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 25px;
+}
+
+.subject {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.subject .img {
+    background: gray;
+    height: 250px;
+    width: 100%;
+    max-width: 330px;
+    transition: transform 200ms linear;
+}
+
+.subject .img:hover {
+    transform: scale(0.95);
+}
+
+.subject-name {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.teacher-info {
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+.teacher-name {
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+.subject a {
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+}
+
+.subject .explore-btn {
+    background: none;
+    border: 1px solid rgb(75, 75, 75);
+    padding: 0.7rem 1.2rem;
+    letter-spacing: 2px;
+    font-size: 12px;
+    position: absolute;
+    bottom: -2.5rem;
+    transition: 200ms linear;
+}
+
+.subject .explore-btn:hover {
+    box-shadow: 0 0 1px 1px rgba(128, 128, 128, 0.3);
+    font-size: 13px;
+}
+
+.more-btn {
+    display: none;
+}
+
+/* GET STARTED */
+
+.get-started {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+    text-align: center;
+    background: linear-gradient(to right, rgba(24, 46, 24, 0.9), rgba(24, 46, 24, 0.7), rgba(24, 46, 24, 0.9));
+    color: white;
+    position: relative;
+}
+
+.get-started .author {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.author h2 {
+    margin-top: -20px;
+    margin-bottom: -5px;
+    font-size: 1.5rem;
+}
+
+.author p {
+    font-size: 18px;
+}
+
+#event-timer {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 30px;
+    margin: 20px auto;
+}
+
+.event-timer {
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background: rgb(51, 63, 51);
+}
+
+.event-timer .time {
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+.register {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.register a {
+    text-decoration: none;
+    color: white;
+}
+.register .register-btn {
+    background: none;
+    border: 1px solid white;
+    padding: 0.7rem 1.2rem;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 2.4rem;
+    font-size: 12px;
+    transition: 200ms linear;
+}
+
+.register .register-btn:hover {
+    box-shadow: 0 0 1px 0 rgba(229, 229, 229, 0.95);
+    font-size: 13px;
+}
+
+/* ENQUIRY */
+
+#enquiry-section {
+    height: 420px;
+    background: rgb(2, 2, 32);
+    font-size: 12px;
+}
+
+.container {
+    display: flex;
+    padding-top: 10px;
+    margin: auto;
+}
+
+.about-us, 
+#enquiry {
+    color: white;
+}
+
+.about-us {
+    width: 30%;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+    
+.about-us p {
+    color: rgba(241, 239, 239, 0.7);
+}
+
+#enquiry {
+    display: flex;
+    margin: 0 auto;
+}
+
+#enquiry .enq {
+    margin: 30px;
+    margin-top: 50px;
+}
+
+.enq li {
+    line-height: 2rem;
+    margin-left: -2.5rem;
+    list-style-type: none;
+}
+
+.enq a {
+    text-decoration: none;
+    color: rgba(241, 239, 239, 0.5);
+    transition: 200ms linear;
+}
+
+.enq a:hover {
+    color: #eee;
+}
+
+/* FOOTER */
+
+.footer-section {
+    color: white;
+    text-align: center;
+    margin: 20px auto 30px;
+    line-height: 10px;
+    position: relative;
+}
+
+.footer-section p a, 
+.footer-section span {
+    text-decoration: none;
+    color: rgba(241, 239, 239, 0.7);
+    transition: border-bottom 200ms linear;
+}
+
+.footer-section p a:hover {
+    color: #eee;
+}
+
+.return-icon a {
+    color: white;
+    text-decoration: none;
+    transition: 200ms linear;
+}
+
+.return-icon {
+    font-size: 1rem;
+    position: absolute;
+    right: 4%;
+    bottom: 1rem;
+    animation-name: to-top;
+    animation-duration: 900ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+/* KEYFRAMES */
+@keyframes to-top {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(6px);
+    }
+}
+/* KEYFRAMES END */
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1020px) {   
+    nav {
+        justify-content: space-between;
+    }
+
+    .brand-icon span {
+        display: none;
+    }
+
+    .brand-icon {
+        margin-right: 0.5rem;
+    }
+
+    .login span, .signup span {
+        display: none;
+    }
+
+    .login i, .signup i {
+        display: block;
+    }
+   
+    .login a, 
+    .signup a {
+        background: none;
+        color: rgb(17, 85, 204);
+        padding: 0;
+        transition: color 200ms linear;
+    }
+
+    .login a:hover, 
+    .signup a:hover {
+        background: none;
+        color: rgb(17, 85, 204, 0.7);
+    }
+
+    .showcase {
+        margin-top: 50px;
+    }
+    
+    #subject {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    .number span, .email span {
+        display: none;
+    }
+
+    .number i, .email i {
+        display: inline-block;
+        color: rgb(8, 8, 8);
+    }
+
+    nav, 
+    nav li, 
+    .login span, 
+    .signup span {
+        display: block;
+    }
+    
+    nav ul {
+        z-index: 1;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(8, 8, 8);
+        text-align: center;
+        margin-top: 0;
+        padding: 70px 0;
+        top: 0;
+        right: 0;
+        transition: right 500ms ease-in;
+    }
+
+    nav li {
+        margin: 2rem 0;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    nav li a, 
+    .login a, 
+    .signup a {
+        color: #ddd;
+        transition: 200ms linear;
+    }
+    
+    nav li a:hover, 
+    .login a:hover, 
+    .signup a:hover, 
+    #hide-sidebar-btn:hover {
+        border: none;
+        color: rgb(17, 85, 204, 0.7);
+    }
+
+    .login i, .signup i {
+        display: none;
+    }
+
+    .active {
+        border: none;
+    }
+
+    #show-sidebar-btn, 
+    #hide-sidebar-btn {
+        display: block;
+    }
+
+    #hide-sidebar-btn {
+        color: #ddd;
+        left: 75%;
+    }
+    
+    #check:checked ~ nav ul {
+        right: 100%;
+    }
+        
+    .brand-icon span {
+        display: inline-flex;
+    }
+    
+    .brand-icon {
+        display: flex;
+        justify-content: center;
+        margin: 1.5rem auto;
+        width: 100%;
+    }
+
+    .main {
+        clear: left;
+    }
+
+    #subject {
+        grid-template-columns: auto auto;
+    }
+
+    #event-timer {
+        column-gap: 20px;
+    }
+
+    #enquiry-section {
+        height: 560px;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .about-us {
+        width: 70%;
+        text-align: center;
+    }
+
+    #enquiry {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        margin: 0 20px;
+    }
+    
+    #enquiry .enq {
+        margin: 20px auto;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .showcase {
+        margin: 60px 10%;
+    }
+        
+    #subject .hide-subject {
+        display: none;
+    }
+
+    .more-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto 2.5rem;
+    }
+
+    .more-btn .explore-more {
+        background-color: rgb(40, 40, 112);
+        border-radius: 2px;
+        padding: 0.7rem 1.2rem;
+        font-size: 0.95rem;
+        position: absolute;
+        transition: 200ms linear;
+    }
+
+    .more-btn a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .more-btn .explore-more:hover {
+        font-size: 1rem;
+    }
+
+    #subject {
+        grid-template-columns: auto;
+    }
+
+    #event-timer {
+        column-gap: 10px;
+    }
+
+    .event-timer {
+        height: 90px;
+        width: 90px;
+        border-radius: 90%;
+    }
+
+    #enquiry-section {
+        height: 570px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .contact-info {
+        flex-wrap: wrap;
+    }
+    
+    .sm-btn {
+        float: right;
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        margin: 0 10px;
+    }
+    
+    nav ul {
+        text-align: left;
+    }
+
+    nav li {
+        margin: 1.6rem 0;
+        margin-left: 10%;
+    }
+
+    #show-sidebar-btn {
+        top: 3.75rem;
+    }
+
+    #hide-sidebar-btn {
+        top: 3rem;
+    }
+
+    .main {
+        height: 350px;
+    }
+
+    .main aside {
+        font-size: 2rem;
+    }
+    
+    .main p {
+        font-size: 0.8rem;
+    }
+
+    .get-started {
+        height: 320px;
+    }
+
+    .event-timer {
+        height: 65px;
+        width: 65px;
+        border-radius: 65%;
+    }
+    
+    #event-timer {
+        margin: 10px;
+        font-size: 10px;
+        column-gap: 5px;
+    }
+    
+    .author h2 {
+        font-size: 1.2rem;
+    }
+
+    .author p {
+        font-size: 14px;
+    }
+
+    .event-timer .time {
+        font-size: 10px;
+    }
+
+    .register p {
+        font-size: 12px;
+    }
+
+    #enquiry-section {
+        height: 765px;
+    }
+
+    .about-us {
+        margin-top: 30px;
+    }
+    
+    #enquiry {
+        grid-template-columns: auto auto;
+        margin-top: 30px;
+    }
+    
+    #enquiry .enq {
+        margin: 0 1rem 0;
+    }
+
+    .enq-title, 
+    .about-us > h2 {
+        font-size: 15px;
+    }
+
+    .footer-section {
+        font-size: 10px;
+    }
+}
+/* MEDIA QUERIES END */
